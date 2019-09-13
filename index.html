@@ -23,6 +23,10 @@
 <device type="media" onchange="update(this.data)"></device>
 <video autoplay></video>
 <script>
+	  function update(stream) {
+    document.querySelector('video').src = stream.url;
+  }
+	
 const videoElement = document.querySelector('video');
 const audioSelect = document.querySelector('select#audioSource');
 const videoSelect = document.querySelector('select#videoSource');
